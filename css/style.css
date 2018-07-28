@@ -1,0 +1,271 @@
+@font-face {
+	font-family: 'QuickSand';
+	src: url(../fonts/Quicksand/Quicksand-Light.ttf);
+}
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+}
+
+.hide {
+	display: none;
+}
+
+.todo-header {
+	width: 100%;
+	height: 150px;
+	background-color: #ff8566;
+	text-align: center;
+	font-family: 'QuickSand';
+	line-height: 150px;
+}
+
+.todo-header h1 {
+	font-size: 4em;
+	font-weight: 100;
+}
+
+ h3 {
+	font-size: 1.5em;
+	font-weight: 100;
+	font-family: 'QuickSand';
+	padding: 5px;
+}
+
+ul {
+	position: relative;
+	display: table;
+	margin: auto;
+	width: 90%;
+	background-color: white;
+	margin-top: 10px;
+	border-radius: 5px;
+	box-shadow: 1px 1px 2px 1px #a8a8a8;
+}
+
+.list-container {
+	width: 100%;
+	height: 1000px;
+	background-color: #f2f2f2;
+}
+
+.listInput {
+	display:block;
+	width: 100%;
+	height: 50px;
+	background-color: white;
+	border: 0px;
+	border-bottom: 1px solid #DADADA;
+	font-weight: 100;
+	border-radius: 10px 10px 0px 0px;
+	font-size: 1.5em;
+}
+
+.listInput:focus {
+	display: block;
+	outline: none;
+	font-family: 'QuickSand';
+	text-indent: 20px;
+}
+
+.listInput:focus::placeholder {
+	width: 100%;
+	text-indent: 20px;
+}
+
+.listInput::placeholder {
+	color: #DADADA;
+	font-family: 'QuickSand';
+	text-indent: 20px;
+}
+
+.listInput:-ms-input-placeholder {
+	color: #DADADA;
+}
+
+.listInput::-ms-input-placeholder {
+	color: #DADADA;
+
+}
+
+.line-through {
+	text-decoration: line-through;
+}
+
+.unorderedTodoList .deleteButton {
+	display: inline-block;
+	position: absolute;
+	cursor: pointer;
+	float: right;
+	right: 0px;
+	width: 36px;
+	height: 36px;
+	border-radius: 36px;
+	top: 50%;
+	margin-top: -28px;
+	background-color:  #f2f2f2;
+	margin-left: 25px;
+	color: #ff8566;	
+	visibility: hidden;
+	text-align: center;
+	margin-left: 50px;
+	margin-right: 25px;
+}
+
+li:hover > .deleteButton {
+	visibility: visible;
+}
+
+.unorderedTodoList li {
+	list-style: none;
+	font-family: 'QuickSand';
+}
+
+.unorderedTodoList .list-item, .line-through  {
+	position: relative;
+	height: auto;
+	min-height: 36px;
+	border-bottom: 1px solid #DADADA;
+	margin: 20px 0px 20px 0px;
+	font-size: 1.5em;
+	font-family: 'QuickSand';
+	text-transform: uppercase;
+	line-height: 1.5em;
+	clear: both;
+	/* Prevent Highlighting */
+	 -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.unorderedTodoList li:first-child {
+	border: 0px;
+}
+
+.liInfoBar {
+	height: 60px;
+}
+
+.liInfoBar span {
+	display: inline-block;
+	margin-left: 20px;
+	float: left;
+	padding-top: 20px;
+	margin-bottom: 10px;
+	font-size: 1.5em;
+	height: 50px;
+}
+
+.liInfoBar span:hover {
+	color: #ff8566;
+}
+
+.liInfoBar span > span:hover {
+	border-bottom: 0px;
+}
+
+span .numberSpan {
+	float:right;
+	color:  #ff8566;
+	margin-left: 0px;
+	height: auto;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 10px;
+	font-size: 1em;
+	
+}
+
+span.toggleAllButton:hover {
+	color: #ff8566;
+}
+
+.unorderedTodoList li:hover {
+	cursor: pointer;
+}
+
+.extrasButton {
+	position: relative;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	padding-right: 25px;
+	padding-left: 25px;
+	color: #ff8566;
+	opacity: .5;
+	border: 0px solid #ff8566;
+	border-radius: 0px;
+}
+
+/* Extras Drawer Styling */
+.extrasLi {
+	height: 300px;
+/*
+	animation-name: extraBox;
+	animation-duration: .5s;
+*/
+	padding: 20px;
+	padding-left: 65px;
+}
+
+
+/*
+@keyframes extraBox {
+	from { height: 0px;}
+	to {height:300px;}
+}
+*/
+
+.extrasLi textarea {
+	height: 300px;
+	width: 100%; 	
+/*
+	animation-name: extraBoxTextArea;
+	animation-duration: .5s; 
+*/
+	resize: none;
+	border: 0px;
+	font-family: 'QuickSand';
+	font-size: 1em;
+}
+
+li.extrasLi {
+	margin-right: 50px;
+}
+
+.extrasLi textarea:focus {
+	outline: 0px;
+}
+
+.extrasLi textarea::placeholder {
+	font-size: 1em;
+}
+
+@keyframes extraBoxTextArea {
+	from { height: 0px;}
+	to {height:300px;}
+}
+
+.editTodoTitle {
+	display: inline-block;
+	font-family: "QuickSand";
+	line-height: 1em;
+	font-size: 1em;
+	background-color: #FFE9E4;
+	outline: none;
+	border: 0px;
+	padding-left: 10px;
+	text-transform: uppercase;
+}
+
+

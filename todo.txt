@@ -1,0 +1,32 @@
+V10 
+X- Selecting the circle next to a li should show more options below it.
+	X- Click event 
+		X- Add an li below using animation.
+			X- Holds a text box for more notes.
+			X- Add the notes to todos.extra as keyup
+			X- Has a input box to change the title
+			- OPTIONAL - Changes title as keyup
+			- OPTIONAL - has a checkbox to mark as complete.
+			
+	X- Way to update the li name.
+	X- Add notes to the li.
+	
+V11
+- Clicking on completed should filter to show all completed todos.
+- Clicking on remaining should filter to show all remaining todos.
+- Make so focus out of textarea adds the text area value to todo object.
+	- Same as editTodoTitle
+
+REFACTORING
+- Move all the code out of the handlers up to the todoList methods and call from handlers. 
+- Try to make some more custom library code to help refactor.
+
+Future Editions
+- Show a flag when an li has more notes.
+- Prevent displayTodos() from running when toggling completed
+
+
+Future Future Editions
+- Store and retrieve data from server. PHP?
+- Share todo lists via email.
+- Have multiple todo lists.

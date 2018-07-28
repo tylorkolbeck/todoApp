@@ -1,0 +1,39 @@
+
+.bind()
+	- invoke bind on function and pass it an object the bind method returns a new function
+		- invoking this new function invokes the original function as a method of the passed in object
+			- "binds a function to an object"
+	- bind() just returns a function so the function needs to be called once it is 
+	assigned to a variable
+			
+//  Here the function is named originalFunction which takes 1 argument
+
+function originalFunction(arg1) {
+	return this.num1 + arg1;
+}
+
+//  Here a new object named object1 is created which has no own methods.
+var object1 = {
+	num1 : 2;
+}
+
+//  Next we pass object1 to the originalFunction function by using bind. Or we
+//  "bind originalFunction to object1" it is now a method of object1.
+
+var bindMethodToObject = originalFunction.bind(object1);
+
+//  calling bindMethodToObject will invoke originalFunction with object1
+bindMethodToObject(4);
+
+//  Final Notes
+.bind() 
+	- invoked on a function
+	- passed an object as argument
+	- returns a new function 
+	- new function this asscoiated with the passed object
+	- new function need to be invoked
+	
+	
+.call() 
+
+	
